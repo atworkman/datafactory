@@ -1,0 +1,19 @@
+{
+	"name": "ds_test_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sttestlarslardan",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "test.json",
+				"container": "testblob"
+			}
+		},
+		"schema": {}
+	}
+}
