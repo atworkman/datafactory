@@ -30,7 +30,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_test_source",
+						"referenceName": "ds_test_sink",
 						"type": "DatasetReference"
 					}
 				]
