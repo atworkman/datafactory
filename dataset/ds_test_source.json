@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": "test.json",
-				"container": "testblob"
+				"container": "inblob"
 			}
 		},
 		"schema": {}
