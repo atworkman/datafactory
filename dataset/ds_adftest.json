@@ -1,0 +1,24 @@
+{
+	"name": "ds_adftest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_ stadflarslardan",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "adftest.csv",
+				"folderPath": "adftest",
+				"container": "adftest"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

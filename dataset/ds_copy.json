@@ -1,0 +1,24 @@
+{
+	"name": "ds_copy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_ stadflarslardan",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "adftest.csv",
+				"folderPath": "copy",
+				"container": "copy"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
