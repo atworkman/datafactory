@@ -1,0 +1,9 @@
+{
+	"name": "df-dev-larslardan",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9259a97d-3dbb-4ef4-bc32-c5e8a4d75a71",
+		"tenantId": "8bead497-fca3-4495-a813-93255bae928d"
+	}
+}
