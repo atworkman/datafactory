@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 # Installs Node and the npm packages saved in your package.json file in the build
     - name: Setup Node.js environment
-      uses: actions/setup-node@v3.4.1
+      uses: actions/setup-node@v4
       with:
         node-version: 14.x
         
@@ -35,7 +35,7 @@ jobs:
  
 # In order to leverage the artifact in another job, we need to upload it with the upload action 
     - name: upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ExportedArmTemplate # (4) use the same artifact name you used in the previous export step
         path: ${{github.workspace}}/build/ExportedArmTemplate
