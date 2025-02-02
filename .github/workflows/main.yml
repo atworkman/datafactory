@@ -28,12 +28,12 @@ jobs:
         
 # Validates all of the Data Factory resources in the repository. You'll get the same validation errors as when "Validate All" is selected.
     - name: Validate
-      run: npm run build validate ${{github.workspace}} /subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/${DF_RESOURCE_GROUP}/providers/Microsoft.DataFactory/factories/${ADF_NAME} # (2) The validate command needs the root folder location of your repository where all the objects are stored. And the 2nd parameter is the resourceID of the ADF instance 
+      run: npm run build validate ${{github.workspace}} /subscriptions/285e6aaf-8528-45d0-b696-0129595c7d0e/resourceGroups/rg-datafactory/providers/Microsoft.DataFactory/factories/df-dev-larslardan # (2) The validate command needs the root folder location of your repository where all the objects are stored. And the 2nd parameter is the resourceID of the ADF instance 
       working-directory: ${{github.workspace}}/build
  
 
     - name: Validate and Generate ARM template
-      run: npm run build export ${{github.workspace}} /subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/${DF_RESOURCE_GROUP}/providers/Microsoft.DataFactory/factories/${ADF_NAME} "ExportedArmTemplate"  # (3) The build command, as validate, needs the root folder location of your repository where all the objects are stored. And the 2nd parameter is the resourceID of the ADF instance. The 3rd parameter is the exported ARM template artifact name 
+      run: npm run build export ${{github.workspace}} /subscriptions/285e6aaf-8528-45d0-b696-0129595c7d0e/resourceGroups/rg-datafactory/providers/Microsoft.DataFactory/factories/df-dev-larslardan "ExportedArmTemplate"  # (3) The build command, as validate, needs the root folder location of your repository where all the objects are stored. And the 2nd parameter is the resourceID of the ADF instance. The 3rd parameter is the exported ARM template artifact name 
       working-directory: ${{github.workspace}}/build
  
 # In order to leverage the artifact in another job, we need to upload it with the upload action 
