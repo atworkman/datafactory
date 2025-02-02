@@ -30,18 +30,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/credential1')]",
-			"type": "Microsoft.DataFactory/factories/credentials",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"type": "ManagedIdentity",
-				"typeProperties": {
-					"resourceId": "/subscriptions/285e6aaf-8528-45d0-b696-0129595c7d0e/resourceGroups/rg-datafactory/providers/Microsoft.ManagedIdentity/userAssignedIdentities/adf-uami"
-				}
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/integrationRuntime1')]",
 			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
 			"apiVersion": "2018-06-01",
@@ -58,6 +46,18 @@
 							"customProperties": []
 						}
 					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/credential1')]",
+			"type": "Microsoft.DataFactory/factories/credentials",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"type": "ManagedIdentity",
+				"typeProperties": {
+					"resourceId": "/subscriptions/285e6aaf-8528-45d0-b696-0129595c7d0e/resourceGroups/rg-datafactory/providers/Microsoft.ManagedIdentity/userAssignedIdentities/adf-uami"
 				}
 			},
 			"dependsOn": []
@@ -230,7 +230,7 @@
 						]
 					},
 					{
-						"name": "Data flow1",
+						"name": "Data flow",
 						"type": "ExecuteDataFlow",
 						"dependsOn": [],
 						"policy": {
