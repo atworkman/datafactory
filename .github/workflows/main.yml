@@ -56,7 +56,7 @@ jobs:
 
 
       - name: Login via Az module
-        uses: azure/login@v1
+        uses: azure/login@v2
         with:
           client-id: 369c3659-f012-44cc-a624-3e7f6ddf6c06
           tenant-id: 8bead497-fca3-4495-a813-93255bae928d
