@@ -52,17 +52,15 @@ jobs:
       - name: Download a Build Artifact
         uses: actions/download-artifact@v4
         with:
-          name: ExportedArmTemplate # (5) Artifact name 
-
-
+          name: ExportedArmTemplate # (5) Artifact name
+          
       - name: Login via Az module
         uses: azure/login@v2
         with:
-          client-id: 369c3659-f012-44cc-a624-3e7f6ddf6c06
+          auth-type: IDENTITY
           tenant-id: 8bead497-fca3-4495-a813-93255bae928d
           subscription-id: 285e6aaf-8528-45d0-b696-0129595c7d0e
           enable-AzPSSession: true
-          auth-type: IDENTITY
           
       - name: data-factory-deploy
         uses: Azure/data-factory-deploy-action@v1.2.0
