@@ -62,7 +62,8 @@ jobs:
           tenant-id: 8bead497-fca3-4495-a813-93255bae928d
           subscription-id: 285e6aaf-8528-45d0-b696-0129595c7d0e
           enable-AzPSSession: true
-
+          auth-type: IDENTITY
+          
       - name: data-factory-deploy
         uses: Azure/data-factory-deploy-action@v1.2.0
         with:
